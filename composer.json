@@ -1,0 +1,15 @@
+{
+    "name": "ycode/smart-wallet-mvc",
+    "autoload": {
+        "psr-4": {
+            "Ycode\\SmartWalletMvc\\": "app/"
+        }
+    },
+    "authors": [
+        {
+            "name": "imadprogram",
+            "email": "kimad7141@gmail.com"
+        }
+    ],
+    "require": {}
+}
