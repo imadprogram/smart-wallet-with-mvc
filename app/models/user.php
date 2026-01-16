@@ -1,8 +1,6 @@
 <?php
 namespace App\Models;
 
-require_once __DIR__ . '/../../vendor/autoload.php';
-
 use App\Core\Database;
 use PDO;
 
@@ -15,10 +13,6 @@ class User {
     private $db;
 
     public function __construct($Firstname , $Lastname , $Email , $Password) {
-        $this->Firstname = $Firstname;
-        $this->Lastname  = $Lastname;
-        $this->Email     = $Email;
-        $this->Password  = $Password;
         $this->db = Database::getInstance()->getConnection();
     }
 
@@ -31,5 +25,9 @@ class User {
         $stmt->execute(['email' => $email]);
 
         return $stmt->fetch(PDO::FETCH_ASSOC);
+    }
+
+    public function register ($Firstname , $Lastname , $Email , $Password) {
+        $sql = "INSERT INTO users(first_name , last_name , email , password) VALUES()";
     }
 }
