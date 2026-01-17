@@ -43,4 +43,18 @@ class ExpensesController extends Controller {
             }
         }
     }
+
+    public function index() {
+        if (!isset($_SESSION['user_id'])) {
+            header('Location: /smart-wallet-MVC/public/auth/login');
+            exit();
+        }
+
+        $userId = $_SESSION['user_id'];
+        $expenseModel = new Expense();
+        
+        $expenses = $expenseModel->findAll($userId);
+
+        $this->view('expenses/index', ['expenses' => $expenses]);
+    }
 }
