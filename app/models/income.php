@@ -38,12 +38,12 @@ class Income {
         return $stmt->fetch(PDO::FETCH_OBJ);
     }
 
-    public function getTotalIncome($userId) {
+    public function getTotal($userId) {
         $sql = "SELECT SUM(amount) as total FROM incomes WHERE user_id = :user_id";
         $stmt = $this->db->prepare($sql);
         $stmt->execute(['user_id' => $userId]);
+        $row = $stmt->fetch(PDO::FETCH_OBJ);
         
-        $result = $stmt->fetch(PDO::FETCH_OBJ);
-        return $result->total ?? 0;
+        return $row->total ?? 0;
     }
 }
