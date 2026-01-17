@@ -19,9 +19,10 @@ class Income {
         return $stmt->fetchAll(PDO::FETCH_OBJ);
     }
 
-    public function create($userId, $amount, $description, $date) {
-        $sql = "INSERT INTO incomes (user_id, amount, description, date) 
-                VALUES (:user_id, :amount, :description, :date)
+    public function create($userId, $amount, $description, $date, $categoryId) {
+        
+        $sql = "INSERT INTO incomes (user_id, amount, description, date, category_id) 
+                VALUES (:user_id, :amount, :description, :date, :category_id)
                 RETURNING id";
 
         $stmt = $this->db->prepare($sql);
@@ -30,7 +31,8 @@ class Income {
             'user_id' => $userId,
             'amount' => $amount,
             'description' => $description,
-            'date' => $date
+            'date' => $date,
+            'category_id' => $categoryId 
         ]);
 
         return $stmt->fetch(PDO::FETCH_OBJ);

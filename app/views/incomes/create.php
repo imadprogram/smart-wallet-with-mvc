@@ -24,6 +24,29 @@
             <form action="/smart-wallet-MVC/public/incomes/store" method="POST" class="space-y-6">
                 
                 <div>
+                    <label class="block text-sm font-medium text-gray-400 mb-2">Category</label>
+                    <div class="relative">
+                        <select name="category_id" required 
+                            class="w-full bg-gray-900 border border-gray-600 text-white text-lg rounded-xl focus:ring-2 focus:ring-green-500 focus:border-transparent block p-3 appearance-none">
+                            
+                            <option value="" disabled selected>Select a category</option>
+                            
+                            <?php if (!empty($categories)): ?>
+                                <?php foreach ($categories as $cat): ?>
+                                    <option value="<?= $cat->id ?>"><?= htmlspecialchars($cat->name) ?></option>
+                                <?php endforeach; ?>
+                            <?php else: ?>
+                                <option value="" disabled>No categories found</option>
+                            <?php endif; ?>
+                        
+                        </select>
+                        <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-4 text-gray-400">
+                            <i class="fa-solid fa-chevron-down text-sm"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
                     <label class="block text-sm font-medium text-gray-400 mb-2">Amount ($)</label>
                     <div class="relative">
                         <span class="absolute left-4 top-3.5 text-gray-500">$</span>
