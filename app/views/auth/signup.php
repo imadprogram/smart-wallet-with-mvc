@@ -18,14 +18,14 @@
                 <p class="text-gray-400 text-sm mt-1">Start managing your finance today!</p>
             </div>
 
-            <form action="#" class="space-y-4">
+            <form action="/smart-wallet-MVC/public/auth/registerPost" method="post" class="space-y-4">
                 
                 <div class="grid grid-cols-2 gap-4">
                     <div>
-                        <input type="text" name="firstname" placeholder="First Name" class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-white placeholder-gray-400">
+                        <input type="text" name="first_name" placeholder="First Name" class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-white placeholder-gray-400">
                     </div>
                     <div>
-                        <input type="text" name="lastname" placeholder="Last Name" class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-white placeholder-gray-400">
+                        <input type="text" name="last_name" placeholder="Last Name" class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-white placeholder-gray-400">
                     </div>
                 </div>
 
@@ -35,10 +35,6 @@
                 
                 <div class="relative">
                     <input type="password" name="password" placeholder="Password" class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-white placeholder-gray-400">
-                </div>
-
-                <div class="relative">
-                    <input type="password" name="confirm_password" placeholder="Confirm Password" class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-white placeholder-gray-400">
                 </div>
 
                 <button type="submit" class="w-full py-3 bg-blue-600 hover:bg-blue-700 rounded-lg font-semibold transition duration-200 mt-2">Sign Up</button>

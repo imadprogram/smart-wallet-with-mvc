@@ -2,7 +2,7 @@
     "name": "ycode/smart-wallet-mvc",
     "autoload": {
         "psr-4": {
-            "Ycode\\SmartWalletMvc\\": "app/"
+            "App\\": "app/"
         }
     },
     "authors": [
