@@ -42,7 +42,7 @@
 
             <p class="text-gray-400 text-sm mt-6 text-center">
                 Already have an account? 
-                <a href="/smart-wallet-MVC/public/login" class="text-blue-500 hover:underline">Sign In</a>
+                <a href="/smart-wallet-MVC/public/auth/login" class="text-blue-500 hover:underline">Sign In</a>
             </p>
 
             <p class="text-gray-500 text-xs mt-auto pt-4 text-center">© Smart Wallet 2023, All right reserved</p>

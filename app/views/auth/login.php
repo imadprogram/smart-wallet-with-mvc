@@ -18,12 +18,12 @@
                 <p class="text-gray-400 text-sm mt-1">We're delighted to have you here!</p>
             </div>
 
-            <form action="#" class="space-y-4">
+            <form action="/smart-wallet-MVC/public/auth/loginPost" method="post" class="space-y-4">
                 <div>
-                    <input type="email" placeholder="Enter your email address" class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-white placeholder-gray-400">
+                    <input type="email" name="email" placeholder="Enter your email address" class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-white placeholder-gray-400">
                 </div>
                 <div class="relative">
-                    <input type="password" placeholder="Enter your password" class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-white placeholder-gray-400">
+                    <input type="password" name="password" placeholder="Enter your password" class="w-full px-4 py-3 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 text-white placeholder-gray-400">
                     <span class="absolute inset-y-0 right-4 flex items-center text-gray-400 cursor-pointer">
                         <i class="fa-solid fa-eye"></i>
                     </span>
@@ -33,7 +33,7 @@
             </form>
 
             <p class="text-gray-400 text-sm mt-6 text-center">
-                You don't have an account yet? <a href="/smart-wallet-MVC/public/signup" class="text-blue-500 hover:underline">Register</a>
+                You don't have an account yet? <a href="/smart-wallet-MVC/public/auth/register" class="text-blue-500 hover:underline">Register</a>
             </p>
 
             <p class="text-gray-500 text-xs mt-auto pt-8 text-center">© Smart Wallet 2023, All right reserved</p>
