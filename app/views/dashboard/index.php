@@ -34,29 +34,31 @@
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-10">
             
-            <div class="bg-gray-800 p-6 rounded-2xl shadow-lg border border-gray-700 flex items-center justify-between">
+            <a href="/smart-wallet-MVC/public/incomes" class="block bg-gray-800 hover:bg-gray-750 transition p-6 rounded-2xl shadow-lg border border-gray-700 flex items-center justify-between group cursor-pointer">
                 <div>
-                    <p class="text-gray-400 text-sm mb-1">Total Income</p>
+                    <p class="text-gray-400 text-sm mb-1 group-hover:text-white transition">Total Income</p>
                     <p class="text-3xl font-bold text-green-400">
                         + $ <?= number_format($totalIncome, 2) ?>
                     </p>
+                    <span class="text-xs text-gray-500 underline mt-1 block">View History</span>
                 </div>
-                <div class="w-12 h-12 bg-green-500/10 rounded-full flex items-center justify-center">
+                <div class="w-12 h-12 bg-green-500/10 rounded-full flex items-center justify-center group-hover:bg-green-500/20 transition">
                     <i class="fa-solid fa-arrow-up text-green-500 text-xl"></i>
                 </div>
-            </div>
+            </a>
 
-            <div class="bg-gray-800 p-6 rounded-2xl shadow-lg border border-gray-700 flex items-center justify-between">
+            <a href="/smart-wallet-MVC/public/expenses" class="block bg-gray-800 hover:bg-gray-750 transition p-6 rounded-2xl shadow-lg border border-gray-700 flex items-center justify-between group cursor-pointer">
                 <div>
-                    <p class="text-gray-400 text-sm mb-1">Total Expenses</p>
+                    <p class="text-gray-400 text-sm mb-1 group-hover:text-white transition">Total Expenses</p>
                     <p class="text-3xl font-bold text-red-400">
                         - $ <?= number_format($totalExpense, 2) ?>
                     </p>
+                    <span class="text-xs text-gray-500 underline mt-1 block">View History</span>
                 </div>
-                <div class="w-12 h-12 bg-red-500/10 rounded-full flex items-center justify-center">
+                <div class="w-12 h-12 bg-red-500/10 rounded-full flex items-center justify-center group-hover:bg-red-500/20 transition">
                     <i class="fa-solid fa-arrow-down text-red-500 text-xl"></i>
                 </div>
-            </div>
+            </a>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -67,7 +69,6 @@
                     </div>
                     <div>
                         <h4 class="text-xl font-bold text-white">Add Income</h4>
-                        <p class="text-gray-400 text-sm">Record a deposit</p>
                     </div>
                 </div>
                 <i class="fa-solid fa-chevron-right text-gray-500 group-hover:translate-x-1 transition"></i>
@@ -80,7 +81,6 @@
                     </div>
                     <div>
                         <h4 class="text-xl font-bold text-white">Add Expense</h4>
-                        <p class="text-gray-400 text-sm">Record a purchase</p>
                     </div>
                 </div>
                 <i class="fa-solid fa-chevron-right text-gray-500 group-hover:translate-x-1 transition"></i>

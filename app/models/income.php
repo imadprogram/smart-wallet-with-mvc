@@ -13,7 +13,12 @@ class Income {
     }
 
     public function findAll($userId) {
-        $sql = "SELECT * FROM incomes WHERE user_id = :user_id ORDER BY date DESC";
+        $sql = "SELECT incomes.*, categories.name as category_name 
+                FROM incomes 
+                LEFT JOIN categories ON incomes.category_id = categories.id 
+                WHERE incomes.user_id = :user_id 
+                ORDER BY incomes.date DESC";
+                
         $stmt = $this->db->prepare($sql);
         $stmt->execute(['user_id' => $userId]);
         return $stmt->fetchAll(PDO::FETCH_OBJ);

@@ -45,4 +45,18 @@ class IncomesController extends Controller {
             }
         }
     }
+
+    public function index() {
+        if (!isset($_SESSION['user_id'])) {
+            header('Location: /smart-wallet-MVC/public/auth/login');
+            exit();
+        }
+
+        $userId = $_SESSION['user_id'];
+        $incomeModel = new Income();
+        
+        $incomes = $incomeModel->findAll($userId);
+
+        $this->view('incomes/index', ['incomes' => $incomes]);
+    }
 }
